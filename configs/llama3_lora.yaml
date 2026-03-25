@@ -1,0 +1,14 @@
+model_name: meta-llama/Meta-Llama-3-8B-Instruct
+dataset: tatsu-lab/alpaca
+max_seq_length: 2048
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+target_modules: [q_proj, v_proj, k_proj, o_proj]
+quantization: 4bit
+learning_rate: 2.0e-4
+num_epochs: 3
+batch_size: 4
+gradient_accumulation_steps: 4
+warmup_ratio: 0.03
+bf16: true
